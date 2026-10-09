@@ -7,9 +7,12 @@ This reproduction keeps four boundaries fixed:
 3. Code and model predicates use the same intent table and action mapping.
 4. RoboJEV's physical evaluator supplies the final task verdict.
 
-The reference run used one AMD Instinct MI300X GPU. MuJoCo rendering ran on the
-CPU through OSMesa. Other hardware and decision providers can implement the
-same `/v1/systemone` contract, but they are not part of the reported result.
+The reference run used one AMD Instinct MI300X (`gfx942`) GPU. The pinned Nox
+bundle validates this architecture before loading and rejects MI350X
+(`gfx950`); do not bypass that check and call the result a reproduction.
+MuJoCo rendering ran on the CPU through OSMesa. Other hardware and decision
+providers can implement the same `/v1/systemone` contract, but they are not
+part of the reported result.
 
 ## 1. Prepare RoboJEV
 
