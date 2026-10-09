@@ -13,6 +13,14 @@ not needed for predicates directly available in simulator state.
 | Exact code predicates | 2000–2009 | 10/10 | Code reads all eight predicates |
 | Seven Nox predicates + one code predicate | 2000–2009 | 9/10 | Nox judges direct fields; code computes withdrawal height |
 
+## Clean-checkout verification
+
+A clean checkout at RoboFastPath commit `e34e0e1` reproduced the predicate
+conditions on one MI300X (`gfx942`) GPU. The pinned Nox runtime reported
+`matches_validated_runtime: true`. Exact code completed 10/10 episodes, and the
+mixed condition completed 9/10; seed 2000 was the only failure and ended at the
+200-decision limit. No thresholds, seeds, or failed episodes were changed.
+
 Both predicate conditions use the same intent table, deterministic action
 mapping, controller, and physical evaluator. The mixed condition has no
 rule-answer fallback. Code computes `withdraw_clear` because it requires
