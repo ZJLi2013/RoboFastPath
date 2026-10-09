@@ -18,6 +18,27 @@ These results show that the model/runtime split is viable. They do not show that
 the model is better than rules: every predicate in this first task can be
 computed exactly from privileged simulator state.
 
+## Rollout videos
+
+Click a preview to open the full MP4 recording.
+
+**Exact code predicates — seed 2000, success**
+
+[![Exact code predicates complete pick-and-place on seed 2000](docs/videos/exact-code-seed-2000.jpg)](docs/videos/exact-code-seed-2000.mp4)
+
+**Nox mixed predicates — seed 2001, success**
+
+[![Nox mixed predicates complete pick-and-place on seed 2001](docs/videos/nox-mixed-success-seed-2001.jpg)](docs/videos/nox-mixed-success-seed-2001.mp4)
+
+**Nox mixed predicates — seed 2000, failure**
+
+[![Nox mixed predicates reach the decision limit on seed 2000](docs/videos/nox-mixed-failure-seed-2000.jpg)](docs/videos/nox-mixed-failure-seed-2000.mp4)
+
+The failure recording is the only failed mixed episode in seeds 2000–2009. It
+reaches the 200-decision limit near the grasp transition; it is included so the
+public artifact preserves the reported failure rather than showing only
+successful rollouts.
+
 ## Architecture
 
 ```text

@@ -8,6 +8,7 @@ dist/
 build/
 results/
 *.mp4
+!docs/videos/*.mp4
 *.log
 .env
 .agent-loop/
